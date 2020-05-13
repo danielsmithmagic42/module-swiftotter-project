@@ -1,0 +1,14 @@
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <referenceContainer name="order_additional_info">
+        <block name="sales_order_export" template="SwiftOtter_OrderExport::order/view/export.phtml" ifconfig="sales/order_export/enabled">
+            <arguments>
+                <argument xsi:type="object" name="details">SwiftOtter\OrderExport\ViewModel\OrderDetails</argument>
+            </arguments>
+        </block>
+        <block name="sales_order_export_status" template="SwiftOtter_OrderExport::order/view/status.phtml" ifconfig="sales/order_export/enabled">
+            <arguments>
+                <argument xsi:type="object" name="details">SwiftOtter\OrderExport\ViewModel\HasBeenExported</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+</layout>

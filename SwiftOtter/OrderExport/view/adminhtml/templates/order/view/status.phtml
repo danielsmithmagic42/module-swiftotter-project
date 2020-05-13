@@ -1,0 +1,11 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $view \SwiftOtter\OrderExport\ViewModel\HasBeenExported */
+$view = $block->getData('details');
+?>
+
+<?php if ($view->hasBeenExported()): ?>
+    <section class="order-export-status admin__page-section">
+        <h3><?= __('Order was exported'); ?></h3>
+    </section>
+<?php endif; ?>
